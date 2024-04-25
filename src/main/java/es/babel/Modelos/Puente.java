@@ -1,15 +1,35 @@
 package es.babel.Modelos;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Puente {
-    List<Coche> listaCoches;
-    double peso;
+
+    List<Coche> cochesEnCirculacion;
+    double pesoTotal;
+
+    public Puente() {}
+
+    public Puente(List<Coche> cochesEnCirculacion, double pesoTotal) {
+        this.cochesEnCirculacion = cochesEnCirculacion;
+        this.pesoTotal = pesoTotal;
+    }
+
+    public List<Coche> getCochesEnCirculacion() {
+        return cochesEnCirculacion;
+    }
+
+    public void setCochesEnCirculacion(List<Coche> cochesEnCirculacion) {
+        this.cochesEnCirculacion = cochesEnCirculacion;
+    }
+
+    public double getPesoTotal() {
+        return pesoTotal;
+    }
+
+    public void setPesoTotal(double pesoTotal) {
+        this.pesoTotal = pesoTotal;
+    }
+
+
+
 }
